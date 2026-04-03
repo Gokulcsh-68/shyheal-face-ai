@@ -195,10 +195,8 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
     height: 100vh;
     position: fixed;
     left: 0; top: 0;
-    background: var(--bg-sidebar);
+    background: #050810;
     border-right: 1px solid rgba(255,255,255,0.06);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     display: flex;
     flex-direction: column;
     z-index: 100;
@@ -320,9 +318,7 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
     justify-content: space-between;
     padding: 28px 40px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    background: rgba(5,8,16,0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(4,6,12,0.95);
     position: sticky;
     top: 0;
     z-index: 50;
@@ -436,9 +432,7 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
 
 /* ─── Glass Card ─── */
 .glass-card {
-    background: var(--bg-glass);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
@@ -543,7 +537,7 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
 /* ─── Engine Status ─── */
 .engine-channels { display: flex; flex-direction: column; gap: 16px; }
 
-/* .channel ruleset removed as it was empty */
+/* .channel placeholder ruleset removed */
 .channel-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 0.8rem; font-weight: 500; }
 .channel-dot { width: 8px; height: 8px; border-radius: 50%; }
 .rppg-dot { background: var(--accent-purple); box-shadow: 0 0 6px rgba(123,47,255,0.5); }
@@ -626,8 +620,8 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
     align-items: center;
     justify-content: space-between;
     padding: 16px 24px;
-    background: rgba(4,6,12,0.96);
-    border-bottom: 1px solid rgba(0,212,255,0.12);
+    background: #050810;
+    border-bottom: 1px solid rgba(0,212,255,0.15);
     position: sticky; top: 0; z-index: 50;
 }
 .scan-top-left, .scan-top-right { display: flex; align-items: center; gap: 12px; }
@@ -673,14 +667,21 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
 /* ─── Camera Viewport ─── */
 .camera-viewport {
     position: relative;
-    background: #000;
-    min-height: 550px;
-    overflow: hidden;
-}
-.camera-container {
-    position: absolute; inset: 0;
+    background: #020408;
+    min-height: 500px;
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
+    padding: 20px;
+}
+.camera-container {
+    position: relative;
+    width: 100%; height: 100%;
+    max-width: 900px; max-height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,0.05);
+    background: #000;
 }
 #camera-feed { width: 100%; height: 100%; object-fit: contain; transform: scaleX(-1); background: #000; }
 .face-overlay { position: absolute; inset: 0; pointer-events: none; }
@@ -763,7 +764,7 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
 /* ─── Floating Camera Metrics ─── */
 .cam-float-metrics {
     position: absolute;
-    top: 20px; left: 20px;
+    top: 32px; left: 32px;
     display: flex; flex-direction: column; gap: 8px;
     z-index: 12;
 }
@@ -793,9 +794,9 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
 .coaching-pill {
     display: flex; align-items: center; gap: 8px;
     padding: 10px 20px;
-    background: rgba(0,0,0,0.88);
+    background: rgba(5,8,16,0.95);
     border-radius: var(--radius-full);
-    border: 1px solid rgba(0,212,255,0.15);
+    border: 1px solid rgba(0,212,255,0.2);
     font-size: 0.78rem;
     white-space: nowrap;
     position: relative;
@@ -894,7 +895,7 @@ p { color: var(--text-secondary); font-size: 0.85rem; }
 .wf-dot { width: 6px; height: 6px; border-radius: 50%; }
 
 /* ─── Source Display ─── */
-/* .source-section ruleset removed as it was empty */
+/* .source-section placeholder ruleset removed */
 .source-display {
     display: flex; justify-content: space-between; align-items: center;
     padding: 12px 16px;
